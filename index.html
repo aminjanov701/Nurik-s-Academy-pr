@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nurik's Academy — Excellence in Language Education</title>
+<meta name="description" content="Nurik's Academy — Premium language education.">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Typography: Cormorant Garamond (headings) / Inter (body) / Manrope (buttons) -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- AMBIENT BACKGROUND LAYERS (shared across all slides)          -->
+<!-- ============================================================ -->
+<div class="stage-bg">
+  <div class="marble-layer marble-layer--base"></div>
+  <div class="marble-layer marble-layer--veins"></div>
+  <div class="vignette"></div>
+  <div class="light-sweep" id="lightSweep"></div>
+  <canvas id="particleField" aria-hidden="true"></canvas>
+</div>
+
+<!-- ============================================================ -->
+<!-- PERSISTENT CHROME : logo mark + progress rail                 -->
+<!-- ============================================================ -->
+<header class="chrome chrome--top">
+  <div class="brand-mark" aria-hidden="true">
+    <svg viewBox="0 0 64 64" class="brand-mark__svg">
+      <circle cx="32" cy="32" r="30.5" class="brand-mark__ring"/>
+      <text x="32" y="40" text-anchor="middle" class="brand-mark__letter">N</text>
+    </svg>
+    <span class="brand-mark__word">NURIK'S <em>ACADEMY</em></span>
+  </div>
+  <div class="chrome__tag">LANGUAGE&nbsp;&nbsp;·&nbsp;&nbsp;EXCELLENCE&nbsp;&nbsp;·&nbsp;&nbsp;DISTINCTION</div>
+</header>
+
+<nav class="chrome chrome--rail" aria-label="Presentation progress">
+  <ol class="rail" id="rail">
+    <li class="rail__node" data-slide="0"><span class="rail__num">01</span><span class="rail__label">Hero</span></li>
+    <li class="rail__node" data-slide="1"><span class="rail__num">02</span><span class="rail__label">About</span></li>
+    <li class="rail__node" data-slide="2"><span class="rail__num">03</span><span class="rail__label">Why Us</span></li>
+    <li class="rail__node" data-slide="3"><span class="rail__num">04</span><span class="rail__label">Courses</span></li>
+    <li class="rail__node" data-slide="4"><span class="rail__num">05</span><span class="rail__label">Teachers</span></li>
+    <li class="rail__node" data-slide="5"><span class="rail__num">06</span><span class="rail__label">Results</span></li>
+    <li class="rail__node" data-slide="6"><span class="rail__num">07</span><span class="rail__label">Reviews</span></li>
+    <li class="rail__node" data-slide="7"><span class="rail__num">08</span><span class="rail__label">Statistics</span></li>
+    <li class="rail__node" data-slide="8"><span class="rail__num">09</span><span class="rail__label">Contact</span></li>
+    <li class="rail__node" data-slide="9"><span class="rail__num">10</span><span class="rail__label">Closing</span></li>
+  </ol>
+</nav>
+
+<div class="chrome chrome--progress" aria-hidden="true">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLIDE STAGE                                                    -->
+<!-- ============================================================ -->
+<main class="stage" id="stage">
+
+  <!-- SLIDE 01 — HERO -->
+  <section class="slide" data-slide="0" id="slide-hero">
+    <div class="slide__inner hero">
+      <div class="hero__crest" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="crest-svg">
+          <circle cx="60" cy="60" r="56" class="crest-ring crest-ring--outer"/>
+          <circle cx="60" cy="60" r="44" class="crest-ring crest-ring--inner"/>
+          <text x="60" y="78" text-anchor="middle" class="crest-letter">N</text>
+        </svg>
+      </div>
+      <p class="eyebrow split-text" data-split="chars">EST. EXCELLENCE IN LANGUAGE EDUCATION</p>
+      <h1 class="hero__title split-text" data-split="words">
+        Nurik's <em>Academy</em>
+      </h1>
+      <p class="hero__subtitle split-text" data-split="lines">The art of language, mastered with distinction.</p>
+      <div class="hero__divider" aria-hidden="true"><span></span><i data-lucide="diamond"></i><span></span></div>
+      <p class="hero__location">Reception · Main Campus</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 02 — ABOUT -->
+  <section class="slide" data-slide="1" id="slide-about">
+    <div class="slide__inner about">
+      <div class="about__visual" data-parallax="0.4">
+        <div class="frame-card frame-card--photo">
+          <div class="photo-placeholder" data-placeholder="about-academy-hall.jpg">
+            <i data-lucide="building-2"></i>
+            <span>Academy Hall</span>
+          </div>
+          <div class="frame-card__edge"></div>
+        </div>
+        <div class="frame-card__caption">Tashkent Campus — Since 2014</div>
+      </div>
+      <div class="about__copy">
+        <p class="eyebrow">ABOUT THE ACADEMY</p>
+        <h2 class="heading-xl split-text" data-split="words">A Legacy of<br><em>Linguistic Mastery</em></h2>
+        <p class="body-text">For over a decade, Nurik's Academy has cultivated a singular standard in language education — one defined not by volume, but by precision.</p>
+        <p class="body-text">Our reception, our classrooms, our instructors — each detail is considered, so that every student feels the weight of genuine craftsmanship.</p>
+        <div class="about__stats">
+          <div class="mini-stat"><span class="mini-stat__num" data-counter="11">0</span><span class="mini-stat__label">Years of Craft</span></div>
+          <div class="mini-stat"><span class="mini-stat__num" data-counter="4200">0</span><span class="mini-stat__label">Graduates</span></div>
+          <div class="mini-stat"><span class="mini-stat__num" data-counter="9">0</span><span class="mini-stat__label">Languages</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 03 — WHY CHOOSE US -->
+  <section class="slide" data-slide="2" id="slide-why">
+    <div class="slide__inner why">
+      <p class="eyebrow eyebrow--center">THE DIFFERENCE</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">Why Distinguished Families<br><em>Choose Us</em></h2>
+      <div class="why__grid">
+        <article class="glass-card why__card">
+          <div class="glass-card__icon"><i data-lucide="award"></i></div>
+          <h3>Certified Mastery</h3>
+          <p>Instructors trained to Cambridge & CELTA standard, vetted for fluency in both language and pedagogy.</p>
+        </article>
+        <article class="glass-card why__card">
+          <div class="glass-card__icon"><i data-lucide="users-round"></i></div>
+          <h3>Intimate Class Sizes</h3>
+          <p>No more than eight students per cohort — attention is never an afterthought.</p>
+        </article>
+        <article class="glass-card why__card">
+          <div class="glass-card__icon"><i data-lucide="globe"></i></div>
+          <h3>Global Curriculum</h3>
+          <p>Frameworks drawn from Oxford, the British Council and Cambridge English, adapted with local insight.</p>
+        </article>
+        <article class="glass-card why__card">
+          <div class="glass-card__icon"><i data-lucide="sparkles"></i></div>
+          <h3>Measured Outcomes</h3>
+          <p>Quarterly proficiency audits ensure every student's progress is data-backed, never assumed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 04 — COURSES -->
+  <section class="slide" data-slide="3" id="slide-courses">
+    <div class="slide__inner courses">
+      <p class="eyebrow eyebrow--center">THE CURRICULUM</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">A Course for<br><em>Every Ambition</em></h2>
+      <div class="courses__board">
+        <article class="course-panel">
+          <i data-lucide="book-open-text" class="course-panel__icon"></i>
+          <span class="course-panel__index">I</span>
+          <h3>General English</h3>
+          <p>Foundational to advanced fluency, across all four core competencies.</p>
+        </article>
+        <article class="course-panel course-panel--feature">
+          <i data-lucide="briefcase" class="course-panel__icon"></i>
+          <span class="course-panel__index">II</span>
+          <h3>Business English</h3>
+          <p>Boardroom-ready communication for executives and professionals.</p>
+        </article>
+        <article class="course-panel">
+          <i data-lucide="graduation-cap" class="course-panel__icon"></i>
+          <span class="course-panel__index">III</span>
+          <h3>IELTS & Exam Prep</h3>
+          <p>Strategic, score-driven preparation for international examinations.</p>
+        </article>
+        <article class="course-panel">
+          <i data-lucide="puzzle" class="course-panel__icon"></i>
+          <span class="course-panel__index">IV</span>
+          <h3>Kids & Teens</h3>
+          <p>Immersive, age-calibrated programmes that make fluency instinctive.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 05 — TEACHERS -->
+  <section class="slide" data-slide="4" id="slide-teachers">
+    <div class="slide__inner teachers">
+      <p class="eyebrow eyebrow--center">THE FACULTY</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">Instructors of<br><em>Distinction</em></h2>
+      <div class="teachers__row">
+        <article class="teacher-card">
+          <div class="teacher-card__portrait" data-placeholder="teacher-aisha.jpg"><i data-lucide="user-round"></i></div>
+          <h3>Aisha Rahimova</h3>
+          <p class="teacher-card__title">CELTA · Senior Examiner</p>
+        </article>
+        <article class="teacher-card teacher-card--feature">
+          <div class="teacher-card__portrait" data-placeholder="teacher-james.jpg"><i data-lucide="user-round"></i></div>
+          <h3>James Whitfield</h3>
+          <p class="teacher-card__title">Cambridge DELTA · 14 yrs</p>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card__portrait" data-placeholder="teacher-dilnoza.jpg"><i data-lucide="user-round"></i></div>
+          <h3>Dilnoza Yusupova</h3>
+          <p class="teacher-card__title">IELTS Specialist · 9.0 Band</p>
+        </article>
+        <article class="teacher-card">
+          <div class="teacher-card__portrait" data-placeholder="teacher-marcus.jpg"><i data-lucide="user-round"></i></div>
+          <h3>Marcus Lindgren</h3>
+          <p class="teacher-card__title">Business English Lead</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 06 — RESULTS -->
+  <section class="slide" data-slide="5" id="slide-results">
+    <div class="slide__inner results">
+      <p class="eyebrow eyebrow--center">PROVEN OUTCOMES</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">Results That<br><em>Speak Quietly</em></h2>
+      <div class="results__grid">
+        <div class="result-tile">
+          <span class="result-tile__num"><span data-counter="4200" data-suffix="+">0</span></span>
+          <span class="result-tile__label">Graduates Placed</span>
+        </div>
+        <div class="result-tile">
+          <span class="result-tile__num"><span data-counter="97" data-suffix="%">0</span></span>
+          <span class="result-tile__label">Exam Pass Rate</span>
+        </div>
+        <div class="result-tile">
+          <span class="result-tile__num"><span data-counter="32" data-suffix="">0</span></span>
+          <span class="result-tile__label">Partner Universities</span>
+        </div>
+        <div class="result-tile">
+          <span class="result-tile__num"><span data-counter="11" data-suffix="">0</span></span>
+          <span class="result-tile__label">Years Established</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 07 — REVIEWS -->
+  <section class="slide" data-slide="6" id="slide-reviews">
+    <div class="slide__inner reviews">
+      <p class="eyebrow eyebrow--center">IN THEIR WORDS</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">Voices of Our<br><em>Students</em></h2>
+      <div class="reviews__carousel" id="reviewCarousel">
+        <blockquote class="review-slide is-active">
+          <i data-lucide="quote" class="review-slide__mark"></i>
+          <p>The precision of instruction here is unlike anything I encountered abroad. I sat my IELTS within four months and scored an 8.5.</p>
+          <div class="review-slide__stars">★★★★★</div>
+          <footer>Karim T. — Band 8.5, IELTS Academic</footer>
+        </blockquote>
+        <blockquote class="review-slide">
+          <i data-lucide="quote" class="review-slide__mark"></i>
+          <p>Every lesson felt tailored. My business English transformed enough to lead client calls in London with full confidence.</p>
+          <div class="review-slide__stars">★★★★★</div>
+          <footer>Nodira S. — Business English Graduate</footer>
+        </blockquote>
+        <blockquote class="review-slide">
+          <i data-lucide="quote" class="review-slide__mark"></i>
+          <p>My daughter went from hesitant to fluent in a year. The teachers understand children, not just curriculum.</p>
+          <div class="review-slide__stars">★★★★★</div>
+          <footer>Otabek R. — Parent, Kids Programme</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 08 — STATISTICS -->
+  <section class="slide" data-slide="7" id="slide-stats">
+    <div class="slide__inner stats">
+      <p class="eyebrow eyebrow--center">BY THE NUMBERS</p>
+      <h2 class="heading-xl heading-xl--center split-text" data-split="words">A Decade of<br><em>Measured Progress</em></h2>
+      <div class="stats__rings">
+        <div class="ring-stat">
+          <svg viewBox="0 0 160 160" class="ring-svg">
+            <circle cx="80" cy="80" r="68" class="ring-svg__track"/>
+            <circle cx="80" cy="80" r="68" class="ring-svg__fill" data-ring="97"/>
+          </svg>
+          <div class="ring-stat__value">97%</div>
+          <p class="ring-stat__label">Pass Rate</p>
+        </div>
+        <div class="ring-stat">
+          <svg viewBox="0 0 160 160" class="ring-svg">
+            <circle cx="80" cy="80" r="68" class="ring-svg__track"/>
+            <circle cx="80" cy="80" r="68" class="ring-svg__fill" data-ring="92"/>
+          </svg>
+          <div class="ring-stat__value">92%</div>
+          <p class="ring-stat__label">Retention</p>
+        </div>
+        <div class="ring-stat">
+          <svg viewBox="0 0 160 160" class="ring-svg">
+            <circle cx="80" cy="80" r="68" class="ring-svg__track"/>
+            <circle cx="80" cy="80" r="68" class="ring-svg__fill" data-ring="88"/>
+          </svg>
+          <div class="ring-stat__value">88%</div>
+          <p class="ring-stat__label">Referral Rate</p>
+        </div>
+        <div class="ring-stat">
+          <svg viewBox="0 0 160 160" class="ring-svg">
+            <circle cx="80" cy="80" r="68" class="ring-svg__track"/>
+            <circle cx="80" cy="80" r="68" class="ring-svg__fill" data-ring="100"/>
+          </svg>
+          <div class="ring-stat__value">100%</div>
+          <p class="ring-stat__label">Certified Faculty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 09 — CONTACT -->
+  <section class="slide" data-slide="8" id="slide-contact">
+    <div class="slide__inner contact">
+      <div class="contact__copy">
+        <p class="eyebrow">VISIT US</p>
+        <h2 class="heading-xl split-text" data-split="words">Begin Your<br><em>Fluency Journey</em></h2>
+        <ul class="contact__list">
+          <li><i data-lucide="map-pin"></i><span>12 Amir Temur Avenue, Tashkent, Uzbekistan</span></li>
+          <li><i data-lucide="phone"></i><span>+998 71 200 11 22</span></li>
+          <li><i data-lucide="mail"></i><span>admissions@nuriksacademy.uz</span></li>
+          <li><i data-lucide="clock"></i><span>Mon — Sat, 09:00 to 20:00</span></li>
+        </ul>
+      </div>
+      <div class="contact__qr">
+        <div class="qr-card">
+          <svg viewBox="0 0 100 100" class="qr-svg" aria-label="Scan to book a free trial lesson">
+            <rect x="0" y="0" width="100" height="100" fill="none"/>
+            <g class="qr-dots"></g>
+          </svg>
+          <p>Scan to book a<br>free trial lesson</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10 — FINAL -->
+  <section class="slide" data-slide="9" id="slide-final">
+    <div class="slide__inner final">
+      <div class="final__crest" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="crest-svg">
+          <circle cx="60" cy="60" r="56" class="crest-ring crest-ring--outer"/>
+          <circle cx="60" cy="60" r="44" class="crest-ring crest-ring--inner"/>
+          <text x="60" y="78" text-anchor="middle" class="crest-letter">N</text>
+        </svg>
+      </div>
+      <h2 class="final__title split-text" data-split="words">Nurik's <em>Academy</em></h2>
+      <p class="final__tagline">The Language of Excellence</p>
+      <div class="hero__divider" aria-hidden="true"><span></span><i data-lucide="diamond"></i><span></span></div>
+      <p class="final__url">www.nuriksacademy.uz</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lucide icons (CDN) -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+<!-- GSAP (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
